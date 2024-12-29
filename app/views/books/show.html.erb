@@ -1,6 +1,6 @@
-<h1><%= @book[:title] %></h1>
-<p><strong>Author:</strong> <%= @book[:author] %></p>
-<p><strong>Description:</strong> <%= @book[:description] %></p>
+<h1><%= @book.title %></h1>
+<p><%= @book.author %></p>
 
-<br>
-<%= link_to 'Back to List', books_path %>
+<%= link_to 'Edit', edit_book_path(@book) %> |
+<%= link_to 'Delete', @book, method: :delete, data: { confirm: "Are you sure?" } %> |
+<%= link_to 'Back to Books', books_path %>
